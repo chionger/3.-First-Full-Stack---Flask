@@ -1,0 +1,36 @@
+{% extends "base.html"%}
+{% block content %}
+
+<div class="jumbotron">
+  <h1>Welcome to the NYP's Integrated Care Information System</h1>
+  <form action="{{url_for('validate')}}">
+    <label for="role">Physician : </label>
+    <input name='role' type="radio" value="Physician">
+
+    <label for="role">Staff Nurse : </label>
+    <input name='role' type="radio" value="Staff Nurse">
+
+    <label for="role">Registered Nurse : </label>
+    <input name='role' type="radio" value="Registered Nurse">
+
+    <label for="role">Enrolled Nurse : </label>
+    <input name='role' type="radio" value="Enrolled Nurse">
+
+    <label for="role">Physiotherapist : </label>
+    <input name='role' type="radio" value="Physiotherapist">
+
+    <label for="role">Dietician : </label>
+    <input name='role' type="radio" value="Dietician">
+
+    <label for="staffname">Staffname : </label>
+    <input type="text" name='staffname'>
+
+    <label for="staffpw">Password : </label>
+    <input type="password" name='userpw'>
+
+    <input type="submit" value="Submit Form">
+
+  </form>
+</div>
+
+{% endblock %}

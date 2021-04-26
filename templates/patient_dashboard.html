@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% extends "canary3-base.html"%}
+{% block content %}
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class = 'container'>
+    <h1>This is Dashboard right ?:</h1>
+
+<table class = "table table-hover table-bordered">
+  <thead>
+   <tr>
+     <th scope="col">Time of Update</th>
+     <th scope="col">Patient ID</th>
+     <th scope="col">Doctor in Charge</th>
+     <th scope="col">Nurse in Charge</th>
+     <th scope="col">Diet</th>
+     <th scope="col">Ambulant</th>
+     <th scope="col">Code</th>
+     <th scope="col">Updated by</th>
+   </tr>
+ </thead>
+
+<tr>
+  <td>{{cumulogs[0]['timestamp']}}</td>
+  <td>{{cumulogs[0]['patient_id']}}</td>
+  <td>{{cumulogs[0]['doctor_in_charge']}}</td>
+  <td>{{cumulogs[0]['nurse_in_charge']}}</td>
+  <td>{{cumulogs[0]['diet']}}</td>
+  <td>{{cumulogs[0]['ambulant']}}</td>
+  <td>{{cumulogs[0]['code']}}</td>
+  <td>{{cumulogs[0]['updated_by']}}</td>
+</tr>
+
+</table>
+</div>
+  </body>
+  {% endblock %}
+</html>
