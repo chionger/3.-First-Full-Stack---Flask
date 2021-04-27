@@ -2,7 +2,7 @@ import os
 from flask import Flask, render_template, session, redirect, url_for, flash
 from flask_wtf import FlaskForm
 from wtforms import TextAreaField, TextField, SubmitField, SelectField
-from wtforms.validators import DataRequired
+from wtforms.validators import InputRequired
 from flask_sqlalchemy import SQLAlchemy
 import datetime
 
@@ -36,7 +36,7 @@ class PatientLog(db.Model):
 
 class InputForm(FlaskForm):
 
-    patient_id = SelectField(label = 'Patient ID: ', choices = [('Adam', 'Adam'), ('Eve', 'Eve'), ('Eva', 'Eva'), ('Henry', 'Henry'), ('Mark', 'Mark'), ("", "---")], default = "")
+    patient_id = SelectField(label = 'Patient ID: ', choices = [('Adam', 'Adam'), ('Eve', 'Eve'), ('Eva', 'Eva'), ('Henry', 'Henry'), ('Mark', 'Mark'), ("", "---")], default = "", validators=[InputRequired('Patient ID is required')])
 
     doctor_in_charge = SelectField(label = 'Doctor_in_charge : ', choices = [('Dr A', 'Dr A'), ('Dr B', 'Dr B'), ('Dr C', 'Dr C'), ('Dr D', 'Dr D'), ('Dr E', 'Dr E'), ("", "---")], default = "")
 
