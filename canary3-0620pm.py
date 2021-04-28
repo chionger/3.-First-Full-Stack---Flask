@@ -30,6 +30,8 @@ class PatientLog(db.Model):
     nurse_in_charge = db.Column(db.Text(25),nullable=False, default='')
     diet = db.Column(db.Text(5),nullable=False, default='')
     ambulant = db.Column(db.Text(5),nullable=False, default='')
+    fallrisk = db.Column(db.Text(5), nullable=False,
+    default='')
     code = db.Column(db.Text(10),nullable=False, default='')
     updated_by = db.Column(db.Text(25))
     timestamp = db.Column(db.DateTime, default = datetime.datetime.utcnow(), primary_key = True)
@@ -44,7 +46,10 @@ class InputForm(FlaskForm):
 
     diet = SelectField(label = 'Diet : ', choices = [('DOC', 'DOC'), ('NBM', 'NBM'), ("", "---")], default="")
 
-    ambulant = SelectField(label = 'Ambulant : ', choices = [('Wheelchair', 'Wheelchair'), ('Nil', 'Nil'), ("", "---")], default="")
+    ambulant = SelectField(label = 'Ambulant : ', choices = [('Wheelchair', 'Wheelchair'), ('Not required', 'Not required'), ("", "---")], default="")
+
+    fallrisk = SelectField(label = 'Fall Risk :', choices =[('Yes','Yes'),('No','No'),("", "---")],
+    default ="")
 
     code = SelectField(label = 'Code : ', choices = [('RED', 'RED'), ('YELLOW', 'YELLOW'), ('GREEN', 'GREEN'), ("", "---")], default="")
 
@@ -54,7 +59,7 @@ class InputForm(FlaskForm):
     submit = SubmitField('Save')
 
 class PatientCentricDisplayForm(FlaskForm):
-    patient = SelectField(label = 'Patient : ', choices = [('Adam', 'Adam'), ('Eve', 'Eve'), ('Eva', 'Eva'), ('Henry', 'Henry'), ('Mark', 'Mark'), ("", "---")], default = "")
+    patient = SelectField(label = 'Patient : ', choices = [('Adam', 'Adam'), ('Eve', 'Eve'), ('Eva', 'Eva'), ('Henry', 'Henry'), ('Mark', 'Mark'), ("", "---")], default = "",  validators=[InputRequired('Patient ID is required')])
     proceed = SubmitField('Display')
 
 @app.route('/', methods = ['GET', 'POST'])
@@ -94,6 +99,13 @@ def index():
         else:
             new_ambulant = 'To be updated'
 
+        if form.fallrisk.data != '':
+            new_fallrisk = form.fallrisk.data
+        elif pre_existing_patient_info:
+            new_fallrisk = pre_existing_patient_info.fallrisk
+        else:
+            new_fallrisk = 'To be updated'
+
         if form.code.data != '':
             new_code = form.code.data
         elif pre_existing_patient_info:
@@ -114,6 +126,7 @@ def index():
         nurse_in_charge = new_nurse_in_charge,
         diet = new_diet,
         ambulant = new_ambulant,
+        fallrisk = new_fallrisk,
         code = new_code,
         updated_by = new_updated_by,
 
@@ -127,6 +140,7 @@ def index():
         session['nurse_in_charge']=form.nurse_in_charge.data
         session['diet']=form.diet.data
         session['ambulant']=form.ambulant.data
+        session['fallrisk']=form.fallrisk.data
         session['code']=form.code.data
         session['updated_by']=form.updated_by.data
 
@@ -148,8 +162,8 @@ def individual_screen():
 def select_patient_centric_display():
     form = PatientCentricDisplayForm()
     if form.validate_on_submit():
-        cumulogs = PatientLog.query.filter_by(patient_id = form.patient.data).order_by(PatientLog.timestamp.desc())
-        return render_template('patient_dashboard.html', cumulogs=cumulogs)
+        cumulogs = PatientLog.query.filter_by(patient_id =form.patient.data).order_by(PatientLog.timestamp.desc())
+        return render_template('patient_dashboard1.html', cumulogs=cumulogs)
     return render_template('select_patient_centric_display.html', form = form)
 
 @app.errorhandler(404)

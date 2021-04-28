@@ -29,6 +29,9 @@
     {{form.hidden_tag()}}
     <br>
     {{form.patient.label(class='input-group mb-3')}}  {{form.patient(class='input-group mb-3')}}
+    {% for error in form.patient.errors %}
+      <li style="color:red;">{{error}}.</li>
+    {% endfor %}
     <br>
     {{form.proceed()}}
   </form>

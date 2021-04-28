@@ -19,6 +19,8 @@ class PatientLog(db.Model):
     nurse_in_charge = db.Column(db.Text(25),nullable=False, default='')
     diet = db.Column(db.Text(5),nullable=False, default='')
     ambulant = db.Column(db.Text(5),nullable=False, default='')
+    fallrisk = db.Column(db.Text(5), nullable=False,
+    default='')
     code = db.Column(db.Text(10),nullable=False, default='')
     updated_by = db.Column(db.Text(25))
     timestamp = db.Column(db.DateTime, default = datetime.datetime.utcnow(), primary_key = True)
