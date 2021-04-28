@@ -163,7 +163,10 @@ def select_patient_centric_display():
     form = PatientCentricDisplayForm()
     if form.validate_on_submit():
         cumulogs = PatientLog.query.filter_by(patient_id =form.patient.data).order_by(PatientLog.timestamp.desc())
-        return render_template('patient_dashboard1.html', cumulogs=cumulogs)
+        if cumulogs.count() == 0:
+            return '<h1>There is no record on patient ' + form.patient.data + ' in the database.</h1>'
+        else:
+            return render_template('patient_dashboard1.html', cumulogs=cumulogs)
     return render_template('select_patient_centric_display.html', form = form)
 
 @app.errorhandler(404)
