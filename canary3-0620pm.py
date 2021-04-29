@@ -149,13 +149,13 @@ def index():
 
 @app.route('/update_display')
 def update_display():
-    cumulogs = PatientLog.query.order_by(PatientLog.timestamp)
+    cumulogs = PatientLog.query.order_by(PatientLog.timestamp.desc())
     # cumulogs = PatientLog.query.filter_by(patient_id = form.patient_id.data)
     return render_template('canary3-update_display.html', cumulogs = cumulogs)
 
 @app.route('/individual_screen')
 def individual_screen():
-    cumulogs = PatientLog.query.filter_by(patient_id = 'Adam').order_by(PatientLog.timestamp)
+    cumulogs = PatientLog.query.filter_by(patient_id = 'Adam').order_by(PatientLog.timestamp.desc())
     return render_template('canary3-update_display.html', cumulogs=cumulogs)
 
 @app.route('/select_patient_centric_display', methods = ['POST', 'GET'])
