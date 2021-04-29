@@ -70,7 +70,7 @@ def index():
         pre_existing_patient_info = PatientLog.query.filter_by(patient_id = form.patient_id.data).order_by(PatientLog.timestamp.desc()).first()
 
         # no need to do for patient_id as must be provided.
-
+        # how about in the beginning when there is no patient record ? how to take care of that case ?
         if form.doctor_in_charge.data != '':
             new_doctor_in_charge = form.doctor_in_charge.data
         elif pre_existing_patient_info:
@@ -164,9 +164,7 @@ def select_patient_centric_display():
     if form.validate_on_submit():
         cumulogs = PatientLog.query.filter_by(patient_id =form.patient.data).order_by(PatientLog.timestamp.desc())
         if cumulogs.count() == 0:
-            # return '<h1>There is no record on patient ' + form.patient.data + ' in the database.</h1>'
-            return render_template('canary3-404.html', patient_name = form.patient.data)
-            # <h1>There is no record on patient ' + form.patient.data + ' in the database.</h1>
+            return '<h1>There is no record on patient ' + form.patient.data + ' in the database.</h1>'
         else:
             return render_template('patient_dashboard1.html', cumulogs=cumulogs)
     return render_template('select_patient_centric_display.html', form = form)
