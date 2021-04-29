@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% extends "canary3-base.html"%}
+{% block content %}
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class = 'container'>
+
+    <table class = "table table-hover table-bordered">
+
+    <div class="d-inline p-2 text-white" style="background-color: #3389FF">Record last updated at :</div>
+    <div class="d-inline p-2 bg-dark text-white"> {{cumulogs[0]['timestamp']}}</div>
+
+    <!-- <div class="d-inline p-2 bg-primary text-white">Record last updated by :</div>
+    <div class="d-inline p-2 bg-dark text-white"> {{cumulogs[0]['updated_by']}}</div> -->
+
+    <br>
+    <br>
+    <!-- Color code embedded into backgroun-color for patient_id -->
+    {% if cumulogs[0]['code'] == "RED" %}
+
+    <button type="button" class="btn btn-primary btn-lg btn-block" style = "color: black; background-color: #EF5350"><h1>Patient ID : {{cumulogs[0]['patient_id']}}</h1></button>
+
+    {% elif cumulogs[0]['code'] == "YELLOW" %}
+    <button type="button" class="btn btn-primary btn-lg btn-block" style = "color: black; background-color: #F4D03F"><h1>Patient ID : {{cumulogs[0]['patient_id']}}</h1></button>
+
+    {% else %}
+    <button type="button" class="btn btn-primary btn-lg btn-block" style = "color: black; background-color: #58D68D"><h1>Patient ID : {{cumulogs[0]['patient_id']}}</h1></button>
+
+    {% endif %}
+
+    <button type="button" class="btn btn-secondary btn-lg btn-block"><h3>Doctor in Charge : {{cumulogs[0]['doctor_in_charge']}}</h3></button>
+
+    <button type="button" class="btn btn-secondary btn-lg btn-block"><h3>Nurse in Charge : {{cumulogs[0]['nurse_in_charge']}}</h3></button>
+
+    <td>
+    {% if cumulogs[0]['diet'] == 'NBM' %}
+      <div class="card text-white  mb-3" style="max-width: 18rem; background-color: #EF5350">
+        <div class="card-header"><h1>Diet</h1></div>
+        <div class="card-body">
+          <img src="/static/nbm2.jpg" class="img-fluid" alt="Responsive image">
+        </div>
+      </div>
+        {% else %}
+      <div class="card text-white mb-3" style="max-width: 18rem;background-color: #58D68D">
+        <div class="card-header"><h1>Diet</h1></div>
+        <div class="card-body">
+          <img src="/static/food_allowed.jpg" class="img-fluid" alt="Responsive image">
+        </div>
+      </div>
+      {% endif %}
+    </td>
+
+    <td>
+    {% if cumulogs[0]['fallrisk'] == 'Yes' %}
+      <div class="card text-white mb-3" style="max-width: 18rem; background-color: #EF5350">
+        <div class="card-header"><h1>Fall Risk</h1></div>
+        <div class="card-body">
+          <img src="/static/fall_risk1.jpg" class="img-fluid" alt="Responsive image">
+        </div>
+      </div>
+        {% else %}
+      <div class="card text-white mb-3" style="max-width: 18rem; background-color: #58D68D">
+        <div class="card-header"><h1>Fall Risk</h1></div>
+        <div class="card-body">
+          <img src="/static/fallrisk2.jpg"
+          class="img-fluid" alt="Responsive image">
+        </div>
+      </div>
+      {% endif %}
+    </td>
+
+    <td>
+    {% if cumulogs[0]['ambulant'] == 'Wheelchair' %}
+      <div class="card text-white mb-3" style="max-width: 18rem; background-color: #EF5350">
+        <div class="card-header"><h1>Ambulant</h1></div>
+        <div class="card-body">
+          <img src="/static/wheelchair7.jpg" class="img-fluid" alt="Responsive image">
+        </div>
+      </div>
+        {% else %}
+      <div class="card text-white mb-3" style="max-width: 18rem; background-color: #58D68D">
+        <div class="card-header"><h1>Ambulant</h1></div>
+        <div class="card-body">
+          <img src="/static/nowheelchair8.jpg" class="img-fluid" alt="Responsive image">
+        </div>
+      </div>
+      {% endif %}
+    </td>
+
+  </body>
+  {% endblock %}
+</html>
