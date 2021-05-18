@@ -50,3 +50,6 @@ An overview of the code files used in the project is as shown in Figure 4.
 
 ![image](https://user-images.githubusercontent.com/4100494/118674818-acaca700-b82c-11eb-81f2-cd7c56118234.png)
 {{< caption >}}Figure 4 : Overview of Code Files used in the project{{< /caption >}}
+
+### Value of Project
+With the prototype, the team was able to produce a video clip to seek the comments of healthcare teams from the various hospitals.  These feedback enriches the team's final report to seek management's approval for more extensive implementation.
