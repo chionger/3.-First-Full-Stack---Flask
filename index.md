@@ -40,16 +40,19 @@
 
 ### Software
 
-
+The flask framework was used to develope the application.  The required software were encapsulated in a Python virtual environment (See Figure 3). 
 
 ![image](https://user-images.githubusercontent.com/4100494/118671405-052e7500-b82a-11eb-99ae-4b1c584690a6.png)
 {{< caption >}}Figure 3 : Software Development Environment {{< /caption >}}
 
+### Code
+An overview of the code files used in the project is as shown in Figure 4.
 
+![image](https://user-images.githubusercontent.com/4100494/118674818-acaca700-b82c-11eb-81f2-cd7c56118234.png)
+{{< caption >}}Figure 4 : Overview of Code Files used in the project{{< /caption >}}
 
-This project involves the design and development of a stack using a. Flask (Python), SQLAlchemy, wtforms, mySQL b. uWSGI c. NGINX
-
-and its deployment to a Raspberry Pi 4B.
+### Docker
+The project is then dockerized so that it can be run by any user that has docker installed regardless of Operating System.
 
 ### Markdown
 
