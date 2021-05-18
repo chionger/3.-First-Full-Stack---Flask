@@ -55,19 +55,27 @@ An overview of the code files used in the project is as shown in Figure 4.
 With the prototype, the team was able to produce a video clip to seek the comments of healthcare teams from the various hospitals.  These feedback enriches the team's final report to seek management's approval for more extensive implementation.
 
 # SAMPLE PAGES
-### Patient Headboard Display
+### Patient Headboard Display with Patient Critical Information
 
 ![image](https://user-images.githubusercontent.com/4100494/118689116-4417f700-b839-11eb-8593-82ab0dabd511.png)
+{{< caption >}}Figure 5 : Headboard Display with Critical Patient Information{{< /caption >}}
 
-{{< caption >}}Figure 5 : Overview of Code Files used in the project{{< /caption >}}
+### Patient Headboard Display with no Patient Critical Information
 
+![image](https://user-images.githubusercontent.com/4100494/118690034-3c0c8700-b83a-11eb-8049-dc5ad854f564.png)
+{{< caption >}}Figure 6 : Headboard Display with No Critical Patient Information{{< /caption >}}
 
 ### Simulated Page to capture Healthcare Workers' Input 
 
 ![image](https://user-images.githubusercontent.com/4100494/118688901-0e730e00-b839-11eb-884a-7c47e24692f5.png)
-{{< caption >}}Figure 6 : Simulated Screen for Health care worker's input of critical patient information{{< /caption >}}
+{{< caption >}}Figure 7 : Screen for Health care worker's to simulate input of critical patient information in main system{{< /caption >}}
 
 ### Simulated Page to show records in database 
 ![image](https://user-images.githubusercontent.com/4100494/118689387-84777500-b839-11eb-9e1b-9c656c64e265.png)
-{{< caption >}}Figure 7 : Screen for overview of records in database{{< /caption >}}
+{{< caption >}}Figure 8 : Screen for overview of records in database{{< /caption >}}
 
+# DISTRIBUTION AND BACKUP
+
+Distribution and backup could be done via
+- create and restore images of the Raspberry Pi microSD card using Win32 Disk Imager, or  
+- encapsulate the app using Docker (this results in a zip file which could be extracted using docker load and run using docker run.
