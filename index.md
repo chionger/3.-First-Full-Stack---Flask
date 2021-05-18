@@ -36,13 +36,14 @@
 
 - A tablet was used to simulate the LCD display.  It gets the patient information by subscribing to a website with the browser refresh rate set through auto refresh plug-in.
 
-![image](https://user-images.githubusercontent.com/4100494/118668772-bda6e980-b827-11eb-86c1-a4e6c9a79385.png)
-{{< caption >}}Figure 3 : Software Development Environment {{< /caption >}}
-
 - The raspberry pi also performed the role of simulating the main system by provide simulated web pages for the healthcare workers to key in the patient information. 
 
 ### Software
 
+
+
+![image](https://user-images.githubusercontent.com/4100494/118668772-bda6e980-b827-11eb-86c1-a4e6c9a79385.png)
+{{< caption >}}Figure 3 : Software Development Environment {{< /caption >}}
 
 
 
