@@ -42,7 +42,7 @@
 
 
 
-![image](https://user-images.githubusercontent.com/4100494/118668772-bda6e980-b827-11eb-86c1-a4e6c9a79385.png)
+![image](https://user-images.githubusercontent.com/4100494/118671405-052e7500-b82a-11eb-99ae-4b1c584690a6.png)
 {{< caption >}}Figure 3 : Software Development Environment {{< /caption >}}
 
 
