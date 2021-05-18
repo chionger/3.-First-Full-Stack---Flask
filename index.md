@@ -1,4 +1,21 @@
-##  Work in progress
+##  INTEGRATED PATIENT CENTRIC HEADBOARD DISPLAY
+
+# The patient headboard contains information that are critical to responsive bedside care.  The information are contributed by various members of the healthcare team which keyed the information into the main system.  At the time of this project, a designated healthcare team member woould constantly check for updates and update the patient headboard for patients that are under his/her charge.  Besides being time consuming, this process also carries the risk of healthcare workers working with outdated data.  The digitisation of this process would save time and create capacity for more quality bedside care.
+
+# INTRODUCTION
+
+This project is to demonstrate the convenience and 
+for the integrated display of patient data at the headboard in a hospital setting. It is in collaboration with a group of final year nursing students from NYP.
+
+MOTIVATION
+
+Information that are relevant to bedside care should be available whenever the data is updated and delivered to the place that it is required.
+
+PRODUCT
+
+This project involves the design and development of a stack using a. Flask (Python), SQLAlchemy, wtforms, mySQL b. uWSGI c. NGINX
+
+and its deployment to a Raspberry Pi 4B.
 
 ### Markdown
 
