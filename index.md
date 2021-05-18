@@ -10,22 +10,20 @@
 
 ### Information that are relevant to bedside care should be available whenever the data is updated and be automatically available at the place that it is required.
 
-
 # ENVISAGED SYSTEM
 
 ### In the envisaged system, the current infrastructure would remain and a typical ward would be equipped with server which would contain a subset of the patient related data to supply to the various patient headboard displays.
 
-
-{{< caption >}}The [Amazon Rainforest](https://en.wikipedia.org/wiki/Amazon_rainforest) contains a multitude of species.{{< /caption >}}
-
-and patient 
-![image](https://user-images.githubusercontent.com/4100494/118657749-520c4e80-b81e-11eb-8bec-effb922a2f91.png)
-
-
-
-
-- Bulleted
+- the need for a separate server - a separate server is required to store the information as they are pushed from the main system.  This results in a one way traffic which reduces the cybersecurity risk.
 - 
+
+- 
+
+![image](https://user-images.githubusercontent.com/4100494/118666290-a2d37580-b825-11eb-836b-5feb54da50b5.png)
+{{< caption >}}Figure 1 : Envisaged System{{< /caption >}}
+
+
+
 # PROTOTYPE
 
 
