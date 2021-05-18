@@ -12,19 +12,17 @@
 
 # ENVISAGED SYSTEM
 
-### In the envisaged system, the current infrastructure would remain and a typical ward would be equipped with server which would contain a subset of the patient related data to supply to the various patient headboard displays.
+### In the envisaged system (see Figure 1), the current infrastructure would remain and a typical ward would be equipped with server which would contain a subset of the patient related data to supply to the various patient headboard displays.
 
-- the need for a separate server - a separate server is required to store the information as they are pushed from the main system.  This results in a one way traffic which reduces the cybersecurity risk.
-- 
+- the need for a separate server - a separate server is required to store the information as they are pushed from the main system.  This results in a one way traffic which reduces the cybersecurity risk,
 
-- 
+- the server would keep the information and allow the displays to poll for the relevant information. This allows for flexibility in the usage of the headboard displays to cater for patient movements e.g. change of bed, ward, discharge, admitted. 
 
 ![image](https://user-images.githubusercontent.com/4100494/118666290-a2d37580-b825-11eb-836b-5feb54da50b5.png)
 {{< caption >}}Figure 1 : Envisaged System{{< /caption >}}
 
 
-
-# PROTOTYPE
+#  REQUIREMENTS OF PROTOTYPE
 
 
 
