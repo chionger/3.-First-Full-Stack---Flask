@@ -21,9 +21,19 @@
 ![image](https://user-images.githubusercontent.com/4100494/118666290-a2d37580-b825-11eb-836b-5feb54da50b5.png)
 {{< caption >}}Figure 1 : Envisaged System{{< /caption >}}
 
-
 #  REQUIREMENTS OF PROTOTYPE
 
+### The project team would like to demonstrate the input of data by various healthcare workers and their update at the respective patiet headboards.  As higher management support and futher consultation with the IT Departments of the respective hospitals would need to be done before any connecto the the LIVE system, this portion would need to be simulated.  A pictorial view of the requirements is as shown in Figure 2. 
+
+![image](https://user-images.githubusercontent.com/4100494/118668519-89332d80-b827-11eb-861d-b51f7c4f315d.png)
+{{< caption >}}Figure 2 : Requirements of Prototype{{< /caption >}}
+
+# SOFTWARE DEVELOPMENT ENVIRONMENT
+
+### 
+
+![image](https://user-images.githubusercontent.com/4100494/118668772-bda6e980-b827-11eb-86c1-a4e6c9a79385.png)
+{{< caption >}}Figure 3 : Software Development Environment {{< /caption >}}
 
 
 This project involves the design and development of a stack using a. Flask (Python), SQLAlchemy, wtforms, mySQL b. uWSGI c. NGINX
