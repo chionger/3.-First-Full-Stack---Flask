@@ -1,6 +1,6 @@
 # INTRODUCTION
 
-### This project is done in collaboration with a group of NYP students as part of their effort to develope a prototype to demonstrate the efficiency brough about by digitisation.
+### This project is done in collaboration with a group of NYP students as part of their effort to develope a prototype to demonstrate the efficiency brought about by digitisation.
 
 # INTEGRATED PATIENT CENTRIC HEADBOARD DISPLAY
 
@@ -8,22 +8,26 @@
 
 # MOTIVATION
 
-### Information that are relevant to bedside care should be available whenever the data is updated and automatically updated to the place that it is required.
+### Information that are relevant to bedside care should be available whenever the data is updated and be automatically available at the place that it is required.
 
 
 # ENVISAGED SYSTEM
 
-### In the envisaged system, the current infrastructure would remain and a typical ward would be equipped with server which would contain a subset of the patient related data which would be 
+### In the envisaged system, the current infrastructure would remain and a typical ward would be equipped with server which would contain a subset of the patient related data to supply to the various patient headboard displays.
 
-- Bulleted
+
+{{< caption >}}The [Amazon Rainforest](https://en.wikipedia.org/wiki/Amazon_rainforest) contains a multitude of species.{{< /caption >}}
 
 and patient 
 ![image](https://user-images.githubusercontent.com/4100494/118657749-520c4e80-b81e-11eb-8bec-effb922a2f91.png)
 
+
+
+
+- Bulleted
+- 
 # PROTOTYPE
 
-
-{{< caption >}}The [Amazon Rainforest](https://en.wikipedia.org/wiki/Amazon_rainforest) contains a multitude of species.{{< /caption >}}
 
 
 This project involves the design and development of a stack using a. Flask (Python), SQLAlchemy, wtforms, mySQL b. uWSGI c. NGINX
