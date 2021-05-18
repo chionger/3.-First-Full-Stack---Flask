@@ -10,10 +10,19 @@
 
 ### Information that are relevant to bedside care should be available whenever the data is updated and automatically updated to the place that it is required.
 
+
+# ENVISAGED SYSTEM
+
+### In the envisaged system, the current infrastructure would remain and a typical ward would be equipped with server which would contain a subset of the patient related data which would be 
+
+- Bulleted
+
+and patient 
+![image](https://user-images.githubusercontent.com/4100494/118657749-520c4e80-b81e-11eb-8bec-effb922a2f91.png)
+
 # PROTOTYPE
 
 
-![image](https://user-images.githubusercontent.com/4100494/118657749-520c4e80-b81e-11eb-8bec-effb922a2f91.png)
 {{< caption >}}The [Amazon Rainforest](https://en.wikipedia.org/wiki/Amazon_rainforest) contains a multitude of species.{{< /caption >}}
 
 
