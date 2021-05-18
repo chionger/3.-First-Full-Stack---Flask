@@ -14,7 +14,7 @@
 
 
 ![image](https://user-images.githubusercontent.com/4100494/118657749-520c4e80-b81e-11eb-8bec-effb922a2f91.png)
-<figcaption>{{ .Inner | Markdownify }}</figcaption>
+{{< caption >}}The [Amazon Rainforest](https://en.wikipedia.org/wiki/Amazon_rainforest) contains a multitude of species.{{< /caption >}}
 
 
 This project involves the design and development of a stack using a. Flask (Python), SQLAlchemy, wtforms, mySQL b. uWSGI c. NGINX
