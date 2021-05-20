@@ -4,7 +4,7 @@
 
 # INTEGRATED PATIENT CENTRIC HEADBOARD DISPLAY
 
-### The patient headboard contains information that are critical to responsive bedside care.  The information are contributed by various members of the healthcare team which keyed the information into the main system.  At the time of this project, a designated healthcare team member woould constantly check for updates and update the patient headboard for patients that are under his/her charge.  Besides being time consuming, this process also carries the risk of healthcare workers working with outdated data.  The digitisation of this process would save time and create capacity for more quality bedside care.
+### The patient headboard contains information that are critical to responsive bedside care.  The information are contributed by various members of the healthcare team which keyed the information into the main system.  At the time of this project, a designated healthcare team member woould constantly check for updates and manually transfer the patient headboard for patients that are under his/her charge.  Besides being time consuming, this process also carries the risk of healthcare workers working with outdated data.  The digitisation of this process would save time and create capacity for more quality bedside care.
 
 # MOTIVATION
 
@@ -12,18 +12,18 @@
 
 # ENVISAGED SYSTEM
 
-### In the envisaged system (see Figure 1), the current infrastructure would remain and a typical ward would be equipped with server which would contain a subset of the patient related data to supply to the various patient headboard displays.
+### In the envisaged system (see Figure 1), the current infrastructure would remain and a typical ward would be equipped with a server which would contain a subset of the patient related data to supply to the various patient headboard displays.
 
 - the need for a separate server - a separate server is required to store the information as they are pushed from the main system.  This results in a one way traffic which reduces the cybersecurity risk,
 
-- the server would keep the information and allow the displays to poll for the relevant information. This allows for flexibility in the usage of the headboard displays to cater for patient movements e.g. change of bed, ward, discharge, admitted. 
+- the separate server would keep the information and allow the displays to pull for the relevant information. This allows for flexibility in the usage of the headboard displays to cater for patient movements e.g. change of bed, ward, discharge, admitted. 
 
 ![image](https://user-images.githubusercontent.com/4100494/118666290-a2d37580-b825-11eb-836b-5feb54da50b5.png)
 {{< caption >}}Figure 1 : Envisaged System{{< /caption >}}
 
 #  REQUIREMENTS OF PROTOTYPE
 
-### The project team would like to demonstrate the input of data by various healthcare workers and their update at the respective patiet headboards.  As higher management support and futher consultation with the IT Departments of the respective hospitals would need to be done before any connecto the the LIVE system, this portion would need to be simulated.  A pictorial view of the requirements is as shown in Figure 2. 
+### The project team would like to demonstrate the input of data by various healthcare workers and their update at the respective patient headboards.  As higher management support and futher consultation with the IT Departments of the respective hospitals would need to be done before any connection to the LIVE system, this portion would need to be simulated.  A pictorial view of the requirements is as shown in Figure 2. 
 
 ![image](https://user-images.githubusercontent.com/4100494/118668519-89332d80-b827-11eb-861d-b51f7c4f315d.png)
 {{< caption >}}Figure 2 : Requirements of Prototype{{< /caption >}}
@@ -32,7 +32,7 @@
 
 ### Hareware
 
-- A raspberry pi 4B was configured to perform the role of the server to receive updated patient information from the various healthcare workers and supply these information when pulled by the respective patient headboards.  As it operates on the Linux version of Debian Operating System, it could also be hardened against security threats.
+- A raspberry pi 4B was configured to perform the role of the separate server to receive updated patient information from the various healthcare workers and supply these information when pulled by the respective patient headboards.  As it operates on the Linux version of Debian Operating System, it could also be hardened against security threats.
 
 - A tablet was used to simulate the LCD display.  It gets the patient information by subscribing to a website with the browser refresh rate set through auto refresh plug-in.
 
