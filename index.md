@@ -1,6 +1,6 @@
 # INTRODUCTION
 
-### This project is done in collaboration with a group of NYP students from the School of Health and Social Studies as part of their effort to develope a prototype to demonstrate the efficiency brought about by digitisation.
+### This project is done in collaboration with a group of NYP students from the School of Health and Social Sciences as part of their effort to develope a prototype to demonstrate the efficiency brought about by digitisation.
 
 # INTEGRATED PATIENT CENTRIC HEADBOARD DISPLAY
 
