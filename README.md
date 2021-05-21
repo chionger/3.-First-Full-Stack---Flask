@@ -3,7 +3,7 @@
 INTRODUCTION
 
 This project is for the integrated display of patient data at the headboard in a hospital setting.  It is in collaboration with a group of final year nursing students
-from NYP.
+from NYP's School of Health and Social Science.
 
 MOTIVATION
 
